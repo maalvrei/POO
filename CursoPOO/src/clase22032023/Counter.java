@@ -43,7 +43,7 @@ public class Counter {
 	}
 
 	boolean increment(int n) {
-		if (value + n >= maxValue) {
+		if (value + n > maxValue) {
 			return false;
 		} else {
 			value += n;

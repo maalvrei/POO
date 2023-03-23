@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Tarde\Desktop\curso poo\.metadata\.plugins\org.eclipse.jdt.core
+3959137331.index
+231632053.index
+1865797976.index

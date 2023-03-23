@@ -96,5 +96,14 @@ public class Point {
 		Point p1 = new Point();
 		Point p2 = new Point("green", 'a');
 		p2.showSimple();
+		for (int i = 7; i>=0;i--) {
+			if (i==0)
+				System.out.println(i + " +--+--+--+--+--+--+--+--+--+--+--+");
+				else
+			System.out.println(i + " +--+--+--+--+--+--+--+--+--+--+--+\n  |  |  |  |  |  |  |  |  |  |  |  |");
+			;
+		}
+		System.out.println("  0  1  2  3  4  5  6  7  8  9 10 11 12");
+		;
 	}
 }

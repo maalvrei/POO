@@ -94,23 +94,37 @@ public class Point {
 
 	void show() {
 		for (int ejeY = 7; ejeY >= 0; ejeY--) {
-			for (int ejeX = 0; ejeX < 12; ejeX++) {
+			for (int ejeX = 0; ejeX <12; ejeX++) {
 				boolean control = true;
-				if (ejeY == y && ejeX == x) {
+
+				if (ejeY == y && ejeX == x && ejeX == 0) {
+					System.out.print(ejeY + "  ");
 					System.out.print(symbol);
 					control = false;
 				}
-				if (ejeX == 0) {
+
+				if (ejeY == y && ejeX == x && control == true) {
+					System.out.print("---");
+					System.out.print(symbol);
+					control = false;
+				}
+
+				if (ejeX == 0 && control == true) {
 					System.out.print(ejeY + "  +");
 				}
+
 				if (control == false) {
-					System.out.print("--+");
-				} else {
 					System.out.print("---+");
-					if (ejeX == 11) {
-						System.out.print("\n");
-						if (ejeY != 0) {
-							System.out.println("   |   |   |   |   |   |   |   |   |   |   |   |   |");
+				} else {
+					if (control == false) {
+						System.out.println("--+");
+					} else {
+						System.out.print("---+");
+						if (ejeX == 11) {
+							System.out.print("\n");
+							if (ejeY != 0) {
+								System.out.println("   |   |   |   |   |   |   |   |   |   |   |   |   |");
+							}
 						}
 					}
 				}
@@ -121,7 +135,7 @@ public class Point {
 	}
 
 	public static void main(String[] args) {
-		Point p1 = new Point((byte) 4, (byte) 4, "green", 'b');
+		Point p1 = new Point((byte) 0, (byte) 0, "green", 'b');
 		Point p2 = new Point("green", 'a');
 		p1.show();
 	}

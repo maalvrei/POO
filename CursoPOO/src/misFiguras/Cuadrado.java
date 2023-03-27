@@ -1,54 +1,62 @@
 package misFiguras;
 
 public class Cuadrado {
-	
-	private String color;
-	private int lado;
-	
-	void setColor (String color) {
-		this.color = color;
+	   // PROPIEDADES
+	    private String color;
+	    private int lado;
+
+	    
+	    // GETTERS & SETTERS
+	    public String getColor() {
+	        return color;
+	    }
+
+	    public void setColor(String color) {
+	        this.color = color;
+	    }
+
+	    public int getLado() {
+	        return lado;
+	    }
+	    
+	    // CONSTRUCTORES
+	    
+
+
+	    private Cuadrado(String color, int lado) {
+	        this.color = color;
+	        this.lado = lado;
+	    }
+	    
+	    public Cuadrado() {
+	        this("blanco", 1);
+	    }
+	    
+	    public Cuadrado(int lado) {
+	        this("blanco", lado);
+	    }
+	    
+	    public Cuadrado(long area) {
+	        this("blanco", (int) Math.sqrt(area));
+	    }
+	    
+	    // METODOS
+	    
+	    public long perimetro() {
+	        return 4 * (long)lado;
+	    }
+	    
+	    public long area() {
+	        return (long)lado * lado;
+	    }
+
+	    public boolean comparaAreas(Cuadrado c) {
+	        // iguales entonces true
+	        return this.area() == c.area();
+	    }
+
+	    @Override
+	    public String toString(){
+	        return "Soy un cuadrado de " + lado + " x " + lado;
+	    }
 	}
-	
-	void setLado (int lado) {
-		this.lado = lado;
-	}
-	
-	String getColor () {
-		return color;
-	}
-	
-	int getLado () {
-		return lado;
-	}
-	
-	Cuadrado () {
-		lado = 1;
-	}
-	
-	Cuadrado (double area) {
-		lado = (int) Math.sqrt(area);
-	}
-	
-	Cuadrado (int lado) {
-		this.lado = lado;
-	}
-	
-	int calcularArea () {
-		return lado*lado;
-	}
-	
-	int calcularPerimetro () {
-		return lado*4;
-	}
-	
-	int compararAreas (Cuadrado c) {
-		System.out.println("La diferencia de áreas es " + (this.calcularArea() - c.calcularArea()));
-		return this.calcularArea() - c.calcularArea();
-	}
-	
-	@Override
-	public String toString () {
-		return "El cuadrado es de color " + color + " y sus lados son de " + lado + ". Su área es de " + calcularArea() + " y su perímetro es de " + calcularPerimetro();
-	}
-	
-}

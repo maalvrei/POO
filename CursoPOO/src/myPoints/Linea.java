@@ -8,7 +8,6 @@ public class Linea {
 	public String toString() {
 		String cadena = "Punto inicial: (" + puntoInicial.getX() + "," + puntoInicial.getY() + ")" + "\n"
 				+ "Punto final: (" + puntoFinal.getX() + "," + puntoFinal.getY() + ")";
-		System.out.println(cadena);
 		return cadena;
 	}
 

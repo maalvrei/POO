@@ -42,6 +42,26 @@ public class Rectangulo {
 		color = "green";
 	}
 	
+	long perimetro () {
+		return (long)(2*base + 2*altura);
+	}
+	
+	long area () {
+		return (long) (base*altura);
+	}
+	
+	boolean compararAreas (Rectangulo r) {
+		if (this.area() == r.area()) {
+			System.out.println("Tienen areas iguales");
+			return true;
+		} else {
+			System.out.println("No tienen el mismo area");
+			return false;
+		}
+	}
+	
+	
+	
 	
 	
 }

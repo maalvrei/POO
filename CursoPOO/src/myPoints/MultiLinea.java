@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class MultiLinea {
 
-	private static ArrayList<Punto> puntos = new ArrayList();
+	private static ArrayList<Punto> puntos = new ArrayList<Punto>();
 
 	public String toString() {
 		if (puntos.size() == 0) {

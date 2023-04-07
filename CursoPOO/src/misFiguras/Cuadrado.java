@@ -21,8 +21,6 @@ public class Cuadrado {
 	    
 	    // CONSTRUCTORES
 	    
-
-
 	    private Cuadrado(String color, int lado) {
 	        this.color = color;
 	        this.lado = lado;
@@ -59,4 +57,9 @@ public class Cuadrado {
 	    public String toString(){
 	        return "Soy un cuadrado de " + lado + " x " + lado;
 	    }
+	    
+	    public static void main(String[] args) {
+			Cuadrado c1 = new Cuadrado(1);
+			System.out.println(c1.lado);
+		}
 	}

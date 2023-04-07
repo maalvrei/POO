@@ -1,6 +1,7 @@
 package myPoints;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class MultiLinea {
@@ -91,6 +92,10 @@ public class MultiLinea {
 		}
 		System.out.println(puntos.toString());
 		return true;
+	}
+	
+	public MultiLinea(Punto [] puntos) {
+		this.puntos = new ArrayList<Punto>(Arrays.asList(puntos));
 	}
 
 	public static void main(String[] args) {

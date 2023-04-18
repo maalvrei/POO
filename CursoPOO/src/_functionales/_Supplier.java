@@ -1,7 +1,7 @@
 package _functionales;
 
 @FunctionalInterface
-public interface _Suplier <Integer> {
+public interface _Supplier <Integer> {
 	
 	Integer get();
 	

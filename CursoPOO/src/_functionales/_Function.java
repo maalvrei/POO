@@ -1,8 +1,8 @@
 package _functionales;
 
 @FunctionalInterface
-public interface _Function <Integer, Double> {
+public interface _Function <String, Integer> {
 
-	Double apply(Integer i);
+	Integer apply(String s);
 	
 }
